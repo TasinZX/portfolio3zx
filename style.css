@@ -1,0 +1,482 @@
+/* universerl select  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* color  */
+
+:root {
+  --primary: #f26c4f;
+  --secondary: #6e6e6e;
+  --footer: #1f1f1f;
+  --pure: #fafafa;
+  --light: #ffffff;
+  --dark: #222222;
+}
+
+/* ultimate power  */
+
+.container {
+  max-width: 1152px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.item-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+/* button  */
+
+.btn {
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--pure);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: var(--pure);
+  border: 2px solid transparent;
+}
+/* css start  */
+
+.up {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1;
+}
+
+.up a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+header {
+  background: var(--dark);
+  padding: 1rem;
+  padding-top: 2rem;
+  height: 500px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+}
+
+header .left .brand h2 {
+  color: var(--light);
+}
+
+header .left .brand h2 span {
+  color: var(--primary);
+  font-weight: 400;
+}
+
+header .right a {
+  color: var(--light);
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header .right button {
+  margin-left: 3rem;
+}
+
+header .right a:hover {
+  color: var(--primary);
+}
+
+section .hero {
+  position: relative;
+}
+
+section .hero .center {
+  position: absolute;
+  bottom: 20px;
+}
+
+section .about {
+  flex-direction: column;
+  align-items: center;
+}
+
+section .about h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+section .about h4 {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+
+section .about h1 span {
+  color: var(--primary);
+}
+
+section .about p {
+  color: var(--secondary);
+  width: 40rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+section.services {
+  margin: 2rem 0;
+  padding: 10rem 0;
+}
+
+section.services .group-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+section.services .services-wrapper h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+section.services .services-wrapper p {
+  font-weight: 300;
+  color: var(--secondary);
+  margin-bottom: 2rem;
+  width: 25rem;
+  line-height: 1.5;
+}
+
+section.services .group-wrapper .group h3 {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+section.services .group-wrapper .group P {
+  color: var(--secondary);
+  line-height: 1.5;
+}
+
+section.services .group-wrapper .group a {
+  color: var(--dark);
+  font-size: 2rem;
+}
+
+section.services .group-wrapper .group {
+  background-color: var(--light);
+  padding: 2rem;
+  padding-left: ;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all 0.3s ease;
+}
+
+section.services .group-wrapper .group:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+section .skill-content {
+  margin-bottom: 10rem;
+}
+
+section .content {
+  text-align: center;
+}
+
+section .content h1 {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+section .content h1 span {
+  color: var(--primary);
+}
+
+section .content P {
+  color: var(--secondary);
+  text-align: center;
+  line-height: 1.4;
+}
+
+section .skill-wrapper .skill {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+section .skill-wrapper .skill h1 {
+  color: var(--primary);
+  padding-bottom: 1rem;
+}
+
+section .skill-wrapper .skill h6 {
+  color: var(--secondary);
+  font-size: 2rem;
+  font-weight: 400;
+  padding-top: 3rem;
+}
+
+section.port-wrapper {
+  background: var(--pure);
+}
+
+section .portfolio .top {
+  text-align: center;
+  margin: 2rem;
+  padding-top: 2rem;
+}
+
+section .portfolio .top h1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+section .portfolio .top h1 span {
+  color: var(--primary);
+}
+
+section .portfolio .top p {
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+section .portfolio .links {
+  text-align: center;
+  padding-bottom: 4rem;
+  padding-top: 2rem;
+}
+
+section .portfolio .links a {
+  color: var(--dark);
+  text-decoration: none;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+section .portfolio .links a:hover {
+  color: var(--primary);
+}
+
+section .portfolio .image-wrapper .images img {
+  width: 250px;
+}
+
+section .portfolio .image-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 4rem;
+}
+
+section .portfolio .image-wrapper .images {
+  padding: 2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease;
+}
+
+section .portfolio .image-wrapper .images:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+section.bg2 {
+  background-color: var(--footer);
+  padding: 5rem;
+}
+
+section .review .top {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+section .review .top h1 {
+  color: var(--light);
+}
+
+section .review .top h1 span {
+  color: var(--primary);
+}
+
+section .review .top p {
+  color: var(--secondary);
+  line-height: 1.5;
+  padding-top: 1rem;
+  font-weight: 400;
+}
+
+section .review .client-wrapper .client img {
+  width: 50px;
+  padding-right: 1rem;
+}
+
+section .review .client-wrapper .client {
+  background: var(--pure);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+section .review .client-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+section .review .client-wrapper .client p {
+  color: var(--secondary);
+  padding-bottom: 1rem;
+}
+
+section .review .client-wrapper .client h6 {
+  font-weight: 400;
+  color: var(--secondary);
+}
+
+section.new-project {
+  background: var(--pure);
+}
+
+section .new {
+  padding: 3rem;
+}
+
+section .end {
+  padding: 3rem;
+}
+
+section .end form input {
+  padding: 0.8rem 2rem;
+  width: 20rem;
+  border: 3px solid rgb(236, 236, 236);
+}
+
+section .end form input:focus {
+  outline: none;
+}
+
+section .end form button {
+  margin-left: 1rem;
+}
+
+footer {
+  background: var(--footer);
+  color: var(--light);
+}
+
+footer .footbar {
+  padding: 4rem 0;
+}
+
+footer .footbar .services-link {
+  flex-direction: column;
+}
+
+footer .footbar .services-link h3 {
+  padding-bottom: 1.2rem;
+  font-size: 1.5rem;
+}
+
+footer .footbar .services-link a {
+  color: var(--light);
+  text-decoration: none;
+  padding-bottom: 1rem;
+}
+
+footer .footbar .flat-link a {
+  font-size: 2rem;
+  padding-right: 1rem;
+  color: var(--light);
+}
+
+footer .footbar .flat-link a:hover:nth-child(1) {
+  color: #4466b1;
+}
+footer .footbar .flat-link a:hover:nth-child(2) {
+  color: rgb(218, 52, 52);
+}
+footer .footbar .flat-link a:hover:nth-child(3) {
+  color: #00acee;
+}
+footer .footbar .flat-link a:hover:nth-child(4) {
+  color: #053eff;
+}
+
+footer .footbar .flat-link {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8rem;
+  margin-right: 2rem;
+}
+
+footer .footbar .services-link a:hover {
+  color: var(--primary);
+}
+
+footer .foot-wrapper {
+  padding: 4rem 0;
+}
+
+footer .foot-wrapper h6 {
+  color: var(--secondary);
+  font-weight: 400;
+  padding-top: 0.3rem;
+}
+
+footer .foot-wrapper a {
+  color: var(--pure);
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+footer .foot-wrapper a:hover {
+  color: var(--primary);
+}
